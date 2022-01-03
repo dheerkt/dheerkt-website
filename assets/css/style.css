@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+	font-family: 'Merriweather', serif;
+}
+
+.container {
+	margin: 0 auto;
+	width: 560px;
+}
+
+a {
+	text-decoration: none;
+	color: #F92C85;
+}
+
+header {
+	margin-bottom: 10%;
+	padding-top: 5%;
+	display: flex;
+}
+
+header table {
+	width: 100%;
+}
+
+.logo {
+	font-weight: 800;
+	padding-left: 0;
+	flex: 1;
+}
+
+.logo a {
+	color: #000;
+}
+
+.main-nav ul {
+	list-style-type: none;
+	text-align: right;
+}
+
+.main-nav ul li {
+	display: inline;
+	padding-left: 1em;
+}
+
+.main-nav ul li a {
+	text-align: center
+}
+
+.main-nav ul li a:hover {
+	border-bottom: 1px solid #F92C85;
+}
+
+.main-nav ul li a.active {
+	border-bottom: 1px solid #F92C85;
+}
+
+.wrapper {
+	margin-bottom: 10%;
+}
+
+p {
+	line-height: 2em;
+}
+
+ul.projects {
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.projects li a span.desc {
+	float:left;
+	border-bottom: 1px solid #F92C85;
+}
+
+ul.projects li a span.year {
+	float: right;
+	font-size: 0.9em;
+}
