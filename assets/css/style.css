@@ -84,3 +84,26 @@ ul.projects li a span.year {
 	float: right;
 	font-size: 0.9em;
 }
+
+/* Handle mobile styling below */
+@media only screen and (max-width: 600px) {
+	.main-nav ul {
+		list-style-type: none;
+	}
+
+	.main-nav ul li {
+		display: block;
+	}
+
+	ul.projects li a span.desc {
+		display: block;
+		max-width: 85%;
+		margin-bottom: 1em;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	ul.projects li a span.desc span.desc-brief {
+		display: none;
+	}
+}
