@@ -1,28 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-	font-family: 'Merriweather', serif;
+	font-family: 'Inter', sans-serif;
+	background-color: #ffffff;
+	color: #000000;
 }
 
 .container {
 	margin: auto;
-	padding: 3em 1em;
-	max-width: 60ch;
+	padding: 2em 1em;
+	max-width: 65ch;
 	line-height: 2;
 	font-size: 1em;
 }
 
-p {
-	color: #1d1d1d;
-}
-
 a {
 	text-decoration: none;
-	color: #F92C85;
+	color: #000000;
 }
 
 header {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	display: flex;
 }
 
@@ -47,7 +45,7 @@ header table {
 
 .main-nav ul li {
 	display: inline;
-	padding-left: 1em;
+	padding-left: 0.5em;
 }
 
 .main-nav ul li a {
@@ -55,15 +53,15 @@ header table {
 }
 
 .main-nav ul li a:hover {
-	border-bottom: 1px solid #F92C85;
+	border-bottom: 1px solid #000000;
 }
 
 .main-nav ul li a.active {
-	border-bottom: 1px solid #F92C85;
+	border-bottom: 1px solid #000000;
 }
 
 .wrapper {
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 }
 
 ul.projects {
@@ -73,16 +71,43 @@ ul.projects {
 }
 
 ul.projects li {
-	padding: 0 0 3em 0;
+	padding: 1em 0;
+}
+
+ul.projects li a {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: 
+		"title year"
+		"brief year";
+	gap: 0.2em 1em;
+	padding: 1em;
+	margin: -1em;
+	border-radius: 8px;
+	transition: background-color 0.2s ease;
+}
+
+ul.projects li a:hover {
+	background-color: #f8f8f8;
 }
 
 ul.projects li a span.desc {
-	float:left;
+	grid-area: title;
+	font-weight: 700; /* Make title bold */
+	font-size: 1em;
+}
+
+ul.projects li a span.desc-brief {
+	grid-area: brief;
+	color: #666666; /* Dark gray color */
+	font-size: 0.8em; /* Smaller font size */
 }
 
 ul.projects li a span.year {
-	float: right;
+	grid-area: year;
+	white-space: nowrap;
 	font-size: 0.9em;
+	align-self: center;
 }
 
 /* Handle mobile styling below */
@@ -98,7 +123,9 @@ ul.projects li a span.year {
 	ul.projects li a span.desc {
 		display: block;
 		max-width: 85%;
-		margin-bottom: 1em;
+	}
+	ul.projects li a span.desc-brief {
+		margin-bottom: 1em; /* Add margin for mobile */
 	}
 }
 
